@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "forever index.js &",
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,8 @@
   },
   "homepage": "https://github.com/MouseZero/NodeBase#readme",
   "dependencies": {
-    "express": "4.14.0"
+    "express": "4.14.0",
+    "forever": "0.15.2"
   },
   "devDependencies": {
     "eslint": "^3.6.1",
