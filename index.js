@@ -6,7 +6,7 @@ app.get('/', (req, res, next) => {
   res.send('Hello World')
 })
 
-const port = 8080
+const port = process.argv[2] || 8080
 app.listen(port, _ => {
-  console.log('Node server started on ' + port)
+  console.log('Node server started on ' + port + '!!!')
 })
