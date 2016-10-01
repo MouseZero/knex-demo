@@ -1,12 +1,12 @@
-'use strict'
-const cfg = require('./dbConfig.json')
+const cfg = require('./knex-cfg.js').pg
 const knex = require('knex')(cfg)
+const screen = require('./screen.js')
 
 knex.select('title', 'rating').from('book').asCallback((err, rows) => {
   if (err) {
-    console.log(err)
+    screen.write(err, 'text')
   } else {
-    console.log(rows)
+    screen.write(rows, 'json')
   }
   knex.destroy()
   console.log('Done')
