@@ -1,6 +1,10 @@
 {
-  "client": "sqlite3",
+  "client": "pg",
   "connection": {
-    "filename": "book.sqlite"
+    "host": "localhost",
+    "user": "dev",
+    "database": "ps_data-access-in-nodejs-using-knex",
+    "password": "4bZzbN9KWWnuVd"
+
   }
 }
