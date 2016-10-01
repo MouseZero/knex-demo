@@ -20,7 +20,9 @@
   "homepage": "https://github.com/MouseZero/NodeBase#readme",
   "dependencies": {
     "express": "4.14.0",
-    "forever": "0.15.2"
+    "forever": "0.15.2",
+    "knex": "0.12.2",
+    "pg": "6.1.0"
   },
   "devDependencies": {
     "eslint": "^3.6.1",
