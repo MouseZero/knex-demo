@@ -1,12 +1,13 @@
 'use strict'
-const express = require('express')
-const app = express()
+const cfg = require('./dbConfig.json')
+const knex = require('knex')(cfg)
 
-app.get('/', (req, res, next) => {
-  res.send('Hello World')
-})
-
-const port = process.argv[2] || 8080
-app.listen(port, _ => {
-  console.log('Node server started on ' + port + '!!!')
+knex.select('title', 'rating').from('book').asCallback((err, rows) => {
+  if (err) {
+    console.log(err)
+  } else {
+    console.log(rows)
+  }
+  knex.destroy()
+  console.log('Done')
 })
